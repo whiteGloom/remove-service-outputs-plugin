@@ -8,7 +8,7 @@ class removeServiceOutputsPlugin {
 
 	apply(compiler) {
 		compiler.hooks.emit.tapAsync(
-			'removeServiceOutputsPlugin',
+			"removeServiceOutputsPlugin",
 			(compilation, callback) => {
 				if (this.options.length < 1) { callback(); return }
 				compilation.chunks.forEach(chunk => {

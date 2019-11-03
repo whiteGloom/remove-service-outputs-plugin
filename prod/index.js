@@ -32,7 +32,7 @@ function () {
     value: function apply(compiler) {
       var _this = this;
 
-      compiler.hooks.emit.tapAsync('removeServiceOutputsPlugin', function (compilation, callback) {
+      compiler.hooks.emit.tapAsync("removeServiceOutputsPlugin", function (compilation, callback) {
         if (_this.options.length < 1) {
           callback();
           return;
