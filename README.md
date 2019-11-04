@@ -22,7 +22,7 @@
 			* **[Подключение к конфигу](#подключение-к-конфигу "Подключение к конфигу")**
 	+ **[Всё.](#всё "Всё.")**
 
-## Инструкци
+## Инструкция
 
 ### Установка
 Для установки плагина в проект выполните команду:
@@ -30,6 +30,8 @@
 ```
 npm i -D whiteGloom/remove-service-outputs-plugin
 ```
+
+[↑ К навигации](#навигация "↑ К навигации")
 
 ### Использование
 
@@ -44,8 +46,11 @@ var removeServiceOutputsPlugin = require("remove-service-outputs-plugin").defaul
 import removeServiceOutputsPlugin from "remove-service-outputs-plugin";
 ```
 
+[↑ К навигации](#навигация "↑ К навигации")
+
 #### Подключение к конфигу
 Для подключения плагина к Webpack, в **конфиге для webpack**, в разделе **`plugins`** напишите:
+
 
 ```
 new removeServiceOutputsPlugin(...[chunkName, regexp]);
@@ -55,7 +60,8 @@ new removeServiceOutputsPlugin(...[chunkName, regexp]);
 * **chunkName** - type: string. Название чанка, из которого нужно убирать файл.
 * **regexp** - type: regexp. Регулярное выражение, по которому определяется, какой файл удалять.
 
-Пример:
+*Пример:*
+
 ```
 {
 	entry: {
@@ -71,6 +77,8 @@ new removeServiceOutputsPlugin(...[chunkName, regexp]);
 	]
 }
 ```
+
+[↑ К навигации](#навигация "↑ К навигации")
 
 ## Всё.
 
