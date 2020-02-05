@@ -1,6 +1,6 @@
 {
 	"name": "remove-service-outputs-plugin",
-	"version": "0.1.4",
+	"version": "0.2.0",
 	"description": "Webpack plugin that removes service outputs after build",
 	"main": "./prod/index.js",
 	"scripts": {
