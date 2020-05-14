@@ -1,8 +1,8 @@
 class removeServiceOutputsPlugin {
-  constructor() {
+  constructor(configsList) {
     this.configsList = [];
 
-    this._init(arguments);
+    this.setConfigsList(configsList);
   }
 
   apply(compiler) {
@@ -29,11 +29,8 @@ class removeServiceOutputsPlugin {
     }
 
     if (typeof configsList[0] === 'string') configsList = [configsList];
-    this.configsList = configsList;
-  }
 
-  _init(configsList) {
-    this.setConfigsList(configsList);
+    this.configsList = configsList;
   }
 }
 
