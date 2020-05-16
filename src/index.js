@@ -1,8 +1,6 @@
 class removeServiceOutputsPlugin {
-  constructor(configsList) {
-    this.configsList = [];
-
-    this.setConfigsList(configsList);
+  constructor(...configsList) {
+    this.configsList = configsList;
   }
 
   apply(compiler) {
@@ -21,16 +19,6 @@ class removeServiceOutputsPlugin {
         callback();
       }
     );
-  }
-
-  setConfigsList(configsList) {
-    if (!Array.isArray(configsList)) {
-      return console.log("Wrong type of configs list: " + typeof configsList);
-    }
-
-    if (typeof configsList[0] === 'string') configsList = [configsList];
-
-    this.configsList = configsList;
   }
 }
 

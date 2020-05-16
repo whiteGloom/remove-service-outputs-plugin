@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -26,11 +24,14 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 var removeServiceOutputsPlugin = /*#__PURE__*/function () {
-  function removeServiceOutputsPlugin(configsList) {
+  function removeServiceOutputsPlugin() {
     _classCallCheck(this, removeServiceOutputsPlugin);
 
-    this.configsList = [];
-    this.setConfigsList(configsList);
+    for (var _len = arguments.length, configsList = new Array(_len), _key = 0; _key < _len; _key++) {
+      configsList[_key] = arguments[_key];
+    }
+
+    this.configsList = configsList;
   }
 
   _createClass(removeServiceOutputsPlugin, [{
@@ -54,16 +55,6 @@ var removeServiceOutputsPlugin = /*#__PURE__*/function () {
 
         callback();
       });
-    }
-  }, {
-    key: "setConfigsList",
-    value: function setConfigsList(configsList) {
-      if (!Array.isArray(configsList)) {
-        return console.log("Wrong type of configs list: " + _typeof(configsList));
-      }
-
-      if (typeof configsList[0] === 'string') configsList = [configsList];
-      this.configsList = configsList;
     }
   }]);
 

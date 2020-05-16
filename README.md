@@ -1,89 +1,92 @@
-# Languages
-* **[Русский](#шо-ита-ru "Русский")**
+<h1 id='languages'>Languages</h1>
 
+* **[English](#what-is-it-en 'English')**
 
-------------
+***
 
+<h1 id='what-is-it-en'>What is it? [EN]</h1>
 
-# Шо ита? [RU]
+[↓ To navigation](#navigation-en '↓ To navigation') | **[↑ To languages](#languages '↑ To languages')**
 
-[↓ К навигации](#навигация "↓ К навигации") | **[↑ To languages](#languages "↑ To languages")**
+**Remove-service-outputs-plugin** — [Webpack &#10150;](https://webpack.js.org/ 'Webpack') plugin, that allows deleting service files generated after build.
 
-**Remove-service-outputs-plugin** — это плагин для [Webpack](https://webpack.js.org/ "Webpack"), который позволяет удалять служебные файлы, которые получаются после сборки проекта.
+<h2 id='navigation-en'>Navigation</h2>
 
-## Навигация
+* **[What is it? [EN]](#what-is-it-en 'What is it? [EN]')**
+    * **Navigation**
+    * **Instruction:**
+        * **[Installation](#installation-en 'Installation')**
+        * **[Import](#import-en 'Import')**
+        * **[Usage](#usage-en 'Usage')**
 
-* **[Шо ита? [RU]](#шо-ита-ru "Шо ита? [RU]")**
-	+ **Навигация**
-	+ **[Инструкция](#инструкция "Инструкция")**
-		- **[Установка](#установка "Установка")**
-		- **[Использование](#использование "Использование")**
-			* **[Импорт](#импорт "Импорт")**
-			* **[Подключение к конфигу](#подключение-к-конфигу "Подключение к конфигу")**
-	+ **[Всё.](#всё "Всё.")**
+<h2 id='instruction-en'>Instruction</h2>
 
-## Инструкция
+<h3 id='installation-en'>Installation</h3>
 
-### Установка
-Для установки плагина в проект выполните команду:
+To install the plugin, use command:
 
 ```
 npm i -D whiteGloom/remove-service-outputs-plugin
 ```
 
-[↑ К навигации](#навигация "↑ К навигации")
+[↑ To navigation](#navigation-en '↑ To navigation')
 
-------------
+***
 
-### Использование
+<h3 id='import-en'>import</h3>
 
-#### Импорт
-Для импорта используйте:
+**Common JS:**
 
 ```
-var removeServiceOutputsPlugin = require("remove-service-outputs-plugin").default;
-```
-Или, если вы используете **ES6+**:
-```
-import removeServiceOutputsPlugin from "remove-service-outputs-plugin";
+var removeServiceOutputsPlugin = require('remove-service-outputs-plugin').default;
 ```
 
-[↑ К навигации](#навигация "↑ К навигации")
+**ES6+:**
 
-------------
+```
+import removeServiceOutputsPlugin from 'remove-service-outputs-plugin';
+```
 
-#### Подключение к конфигу
-Для подключения плагина к Webpack, в **конфиге для webpack**, в разделе **`plugins`** напишите:
+[↑ To navigation](#navigation-en '↑ To navigation')
 
+***
+
+<h3 id='usage-en'>Usage</h3>
+
+Creating of the plugin instance:  
 
 ```
 new removeServiceOutputsPlugin(...[chunkName, regexp]);
 ```
 
 *Arguments:*
-* **chunkName** - type: string. Название чанка, из которого убирается файл.
-* **regexp** - type: RegExp. Регулярное выражение, по которому определяется, файл для удаления (обрабатывает название файла).
+* **chunkName** - _type: string._ To of the chunk to process.
+* **regexp** - _type: RegExp._ Selecting criteria.
 
-*Пример:*
+
+<h3 id='examples'>Examples</h3>
+
+**Will remove js output files of "second" and "third" entries.** 
+
+Webpack config object:
 
 ```
 {
-	entry: {
-		first: "first.js",
-		second: "second.js"
-	},
-	output: {
-		path: "./",
-		filename: [name].js
-	},
-	plugins: [
-		new removeServiceOutputsPlugin(["main", /.*\.js$/], ["second", /.*\.js$/]);
-	]
+    entry: {
+        first: 'first.js',
+        second: 'second.js',
+        third: 'third.js'
+    },
+    output: {
+        path: './',
+        filename: [name].js
+    },
+    plugins: [
+        new removeServiceOutputsPlugin(['second', /.*\.js$/], ['third', /.*\.js$/]);
+    ]
 }
 ```
 
-[↑ К навигации](#навигация "↑ К навигации")
+[↑ To navigation](#navigation-en '↑ To navigation')
 
-## Всё.
-
-**-whiteGloom**
+<h2 id='end-en'>End.</h2>
