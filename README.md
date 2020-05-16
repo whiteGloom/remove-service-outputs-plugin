@@ -18,6 +18,7 @@
         * **[Installation](#installation-en 'Installation')**
         * **[Import](#import-en 'Import')**
         * **[Usage](#usage-en 'Usage')**
+    * **[Examples](#examples-en 'Examples')**
 
 <h2 id='instruction-en'>Instruction</h2>
 
@@ -33,7 +34,7 @@ npm i -D whiteGloom/remove-service-outputs-plugin
 
 ***
 
-<h3 id='import-en'>import</h3>
+<h3 id='import-en'>Import</h3>
 
 **Common JS:**
 
@@ -63,6 +64,9 @@ new removeServiceOutputsPlugin(...[chunkName, regexp]);
 * **chunkName** - _type: string._ To of the chunk to process.
 * **regexp** - _type: RegExp._ Selecting criteria.
 
+[↑ To navigation](#navigation-en '↑ To navigation')
+
+***
 
 <h3 id='examples'>Examples</h3>
 
