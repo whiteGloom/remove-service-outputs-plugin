@@ -1,6 +1,6 @@
 {
 	"name": "remove-service-outputs-plugin",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Webpack plugin that removes service outputs after build",
 	"main": "./prod/index.js",
 	"scripts": {
@@ -24,5 +24,8 @@
 		"@babel/cli": "^7.8.4",
 		"@babel/core": "^7.9.6",
 		"@babel/preset-env": "^7.9.6"
+	},
+	"dependencies": {
+		"webpack": "^4.43.0"
 	}
 }
